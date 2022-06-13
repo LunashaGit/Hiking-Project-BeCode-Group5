@@ -1,0 +1,16 @@
+// ./scss/layout/index
+
+/*** GLOBAL ***/
+@import '../pages/reset';
+@import '../pages/body';
+@import '../pages/nav';
+@import '../pages/footer';
+
+
+/*** PAGES ***/
+@import '../pages/welcome/index';
+@import '../pages/create/index';
+@import '../pages/profil/index';
+@import '../pages/login/index';
+@import '../pages/modify/index';
+@import '../pages/admin/index';

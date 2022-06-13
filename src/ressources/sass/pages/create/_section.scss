@@ -1,0 +1,84 @@
+.section{
+    
+    &__create{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 3px 3px 5px 3px #67676777;
+        border-radius: 20px;
+        margin: 20px 20px 20px 20px;
+        padding: 20px 50px;
+        background-color: $backgroundCard;
+        h1 {
+            font-size:2rem;
+        }
+        form{
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            *{
+                margin: 1rem 0
+            }
+            input{
+                width: 100%;
+                box-shadow: 0px 0px 2px 1px rgba(0,0,0,0.2);
+                border: none;
+                font-size: 1.2rem;
+                border-radius: 0.2rem;
+                padding: 0.5rem;
+                margin-bottom: 1rem;
+                transition: .2s;
+                font-family: 'Quicksand', sans-serif;
+                &:focus{
+                    outline: none;
+                    transform: scale(1.1);
+                    border: 1px solid rgb(52, 116, 82);
+                }
+            }
+            
+            input[type="submit"]{
+                background-color: rgb(52, 116, 82);
+                color: #ffffff;
+                cursor: pointer;
+                &:hover{
+                    background-color: rgb(78, 72, 107);
+                }
+            }
+            div{
+                margin-bottom: 0;
+                select{
+                    margin: 0;
+                    width: 100%;
+                    border: none;
+                    border-radius: 0.2rem;
+                    padding: 0.2rem;
+                    font-size: 1rem;
+                    font-family: 'Quicksand', sans-serif;
+                    &:focus{
+                        outline: none;
+                    }
+                }
+                
+            }
+        }
+        label {
+            margin: 40px 0 5px 0px;
+        }
+        input {
+            margin: 0;
+        }
+        
+    }
+}
+
+
+/*** DESKTOP ***/
+@media screen and (min-width: 768px) {
+    .section {
+        &__create {
+            margin: 40px 250px 40px 250px;
+        }
+    }
+    
+}

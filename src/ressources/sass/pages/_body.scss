@@ -1,0 +1,9 @@
+@import '../abstracts/variables';
+
+body {
+    background: $backgroundColor;
+    color: $textColor;
+    font-family: $fontFamily;
+    max-width: 150rem;
+    margin: 0 auto;
+}

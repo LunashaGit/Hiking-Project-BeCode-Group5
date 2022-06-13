@@ -1,0 +1,758 @@
+/*** GLOBAL ***/
+/***** COLORS *****/
+/***** FONTS *****/
+/* line 4, ../../../../../laragon/www/hamilton-6-hike-application-groupe-5-jordan-luna/src/ressources/sass/pages/_reset.scss */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/***** COLORS *****/
+/***** FONTS *****/
+/* line 3, ../../../../../laragon/www/hamilton-6-hike-application-groupe-5-jordan-luna/src/ressources/sass/pages/_body.scss */
+body {
+  background: #BDCBD0;
+  color: #1d1d1d;
+  font-family: "Inter", sans-serif;
+  max-width: 150rem;
+  margin: 0 auto;
+}
+
+/***** COLORS *****/
+/***** FONTS *****/
+/* line 4, ../../../../../laragon/www/hamilton-6-hike-application-groupe-5-jordan-luna/src/ressources/sass/pages/_nav.scss */
+.navbar #menu-hamburger {
+  cursor: pointer;
+  font-size: 3rem;
+  position: absolute;
+  left: 15px;
+  top: 15px;
+  color: rgba(0, 0, 0, 0.6);
+}
+
+/* line 11, ../../../../../laragon/www/hamilton-6-hike-application-groupe-5-jordan-luna/src/ressources/sass/pages/_nav.scss */
+.navbar #menu-hamburger:hover {
+  color: rgba(0, 0, 0, 0.7);
+}
+
+/***** MEDIAS MOBILE *****/
+@media screen and (max-width: 320px) {
+  /* line 22, ../../../../../laragon/www/hamilton-6-hike-application-groupe-5-jordan-luna/src/ressources/sass/pages/_nav.scss */
+  .navbar a {
+    display: none;
+  }
+  /** NAV STYLE **/
+  /* line 28, ../../../../../laragon/www/hamilton-6-hike-application-groupe-5-jordan-luna/src/ressources/sass/pages/_nav.scss */
+  .nav {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: #FFFFFF;
+    top: -100%;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    overflow: hidden;
+    transition: all 0.3s ease-in-out;
+    transform: scale(0);
+    z-index: 1;
+  }
+  /* line 38, ../../../../../laragon/www/hamilton-6-hike-application-groupe-5-jordan-luna/src/ressources/sass/pages/_nav.scss */
+  .nav .nav-wrapper {
+    position: relative;
+    overflow: hidden;
+    overflow-y: auto;
+    height: 100%;
+  }
+  /* line 43, ../../../../../laragon/www/hamilton-6-hike-application-groupe-5-jordan-luna/src/ressources/sass/pages/_nav.scss */
+  .nav .nav-wrapper nav {
+    text-align: left;
+    margin-left: 35%;
+  }
+  /* line 46, ../../../../../laragon/www/hamilton-6-hike-application-groupe-5-jordan-luna/src/ressources/sass/pages/_nav.scss */
+  .nav .nav-wrapper nav a {
+    position: relative;
+    text-decoration: none;
+    color: #1d1d1d;
+    font-size: 2em;
+    display: inline-block;
+    margin-top: 1.25em;
+    transition: color 0.2s ease-in-out;
+    letter-spacing: 1px;
+  }
+  /* line 55, ../../../../../laragon/www/hamilton-6-hike-application-groupe-5-jordan-luna/src/ressources/sass/pages/_nav.scss */
+  .nav .nav-wrapper nav a:before {
+    content: '';
+    height: 0;
+    position: absolute;
+    width: 0.25em;
+    background-color: #1d1d1d;
+    left: -0.5em;
+    transition: all 0.2s ease-in-out;
+  }
+  /* line 64, ../../../../../laragon/www/hamilton-6-hike-application-groupe-5-jordan-luna/src/ressources/sass/pages/_nav.scss */
+  .nav .nav-wrapper nav a:hover {
+    color: black;
+    font-weight: bold;
+  }
+  /* line 68, ../../../../../laragon/www/hamilton-6-hike-application-groupe-5-jordan-luna/src/ressources/sass/pages/_nav.scss */
+  .nav .nav-wrapper nav a:hover:before {
+    height: 100%;
+  }
+  /**Animations MENU HAMBURGER**/
+  /* line 77, ../../../../../laragon/www/hamilton-6-hike-application-groupe-5-jordan-luna/src/ressources/sass/pages/_nav.scss */
+  #toggle:checked + .hamburger .top-bun {
+    transform: rotate(-45deg);
+    margin-top: 25px;
+  }
+  /* line 81, ../../../../../laragon/www/hamilton-6-hike-application-groupe-5-jordan-luna/src/ressources/sass/pages/_nav.scss */
+  #toggle:checked + .hamburger .bottom-bun {
+    opacity: 0;
+    transform: rotate(45deg);
+  }
+  /* line 85, ../../../../../laragon/www/hamilton-6-hike-application-groupe-5-jordan-luna/src/ressources/sass/pages/_nav.scss */
+  #toggle:checked + .hamburger .meat {
+    transform: rotate(45deg);
+    margin-top: -7px;
+  }
+  /* line 90, ../../../../../laragon/www/hamilton-6-hike-application-groupe-5-jordan-luna/src/ressources/sass/pages/_nav.scss */
+  #toggle:checked + .hamburger + .nav {
+    top: 0;
+    transform: scale(1);
+  }
+}
+
+/***** MEDIAS TABLET *****/
+@media screen and (min-width: 321px) {
+  /* line 100, ../../../../../laragon/www/hamilton-6-hike-application-groupe-5-jordan-luna/src/ressources/sass/pages/_nav.scss */
+  .navbar {
+    background-color: #FFFFFF;
+    padding: 15px;
+  }
+  /* line 103, ../../../../../laragon/www/hamilton-6-hike-application-groupe-5-jordan-luna/src/ressources/sass/pages/_nav.scss */
+  .navbar a {
+    text-decoration: none;
+    margin-right: 15px;
+    color: #1d1d1d;
+    font-weight: bold;
+  }
+  /* line 109, ../../../../../laragon/www/hamilton-6-hike-application-groupe-5-jordan-luna/src/ressources/sass/pages/_nav.scss */
+  .navbar a:hover:not(#logout) {
+    background: rgba(19, 19, 19, 0.05);
+  }
+  /* line 112, ../../../../../laragon/www/hamilton-6-hike-application-groupe-5-jordan-luna/src/ressources/sass/pages/_nav.scss */
+  .navbar #logout {
+    float: right;
+  }
+  /* line 115, ../../../../../laragon/www/hamilton-6-hike-application-groupe-5-jordan-luna/src/ressources/sass/pages/_nav.scss */
+  .navbar #menu-hamburger {
+    display: none;
+  }
+  /* line 119, ../../../../../laragon/www/hamilton-6-hike-application-groupe-5-jordan-luna/src/ressources/sass/pages/_nav.scss */
+  .menuham {
+    display: none;
+  }
+}
+
+/* line 130, ../../../../../laragon/www/hamilton-6-hike-application-groupe-5-jordan-luna/src/ressources/sass/pages/_nav.scss */
+#toggle {
+  display: none;
+}
+
+/**
+    Hamburger
+  **/
+/* line 137, ../../../../../laragon/www/hamilton-6-hike-application-groupe-5-jordan-luna/src/ressources/sass/pages/_nav.scss */
+.hamburger {
+  top: 10px;
+  width: 2em;
+  height: 45px;
+  z-index: 5;
+  position: absolute;
+  left: 15px;
+  cursor: pointer;
+}
+
+/* line 148, ../../../../../laragon/www/hamilton-6-hike-application-groupe-5-jordan-luna/src/ressources/sass/pages/_nav.scss */
+.hamburger div {
+  position: relative;
+  width: 3em;
+  height: 7px;
+  border-radius: 3px;
+  background-color: #080808a2;
+  margin-top: 8px;
+  transition: all 0.3s ease-in-out;
+}
+
+/* line 1, ../../../../../laragon/www/hamilton-6-hike-application-groupe-5-jordan-luna/src/ressources/sass/pages/_footer.scss */
+footer {
+  margin: 10px;
+}
+
+/* line 3, ../../../../../laragon/www/hamilton-6-hike-application-groupe-5-jordan-luna/src/ressources/sass/pages/_footer.scss */
+footer hr {
+  margin: 1.5rem auto;
+  max-width: 80vw;
+}
+
+/* line 7, ../../../../../laragon/www/hamilton-6-hike-application-groupe-5-jordan-luna/src/ressources/sass/pages/_footer.scss */
+footer div {
+  margin: 1rem 0;
+}
+
+/* line 9, ../../../../../laragon/www/hamilton-6-hike-application-groupe-5-jordan-luna/src/ressources/sass/pages/_footer.scss */
+footer div p {
+  color: grey;
+  font-size: 1rem;
+  font-weight: bold;
+  text-align: center;
+}
+
+/*** PAGES ***/
+/* line 1, ../../../../../laragon/www/hamilton-6-hike-application-groupe-5-jordan-luna/src/ressources/sass/pages/welcome/_header.scss */
+.header-welcome {
+  background-image: url("../medias/couple-hiking-mountain-climbing-1296x728-header.webp");
+  background-position: 0 30%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 200px;
+}
+
+/* line 8, ../../../../../laragon/www/hamilton-6-hike-application-groupe-5-jordan-luna/src/ressources/sass/pages/welcome/_header.scss */
+.header-welcome h1 {
+  font-size: 1.5rem;
+  text-align: center;
+  padding-top: 160px;
+  color: rgba(255, 255, 255, 0.833);
+}
+
+/* line 1, ../../../../../laragon/www/hamilton-6-hike-application-groupe-5-jordan-luna/src/ressources/sass/pages/welcome/_card.scss */
+.cards {
+  text-align: center;
+  background-color: #FFFFFF;
+  width: 100%;
+  padding: 20px 0 20px 0;
+  border-radius: 10px;
+  box-shadow: 3px 3px 5px 3px #67676777;
+  margin: 20px auto;
+  max-width: 25rem;
+}
+
+/* line 11, ../../../../../laragon/www/hamilton-6-hike-application-groupe-5-jordan-luna/src/ressources/sass/pages/welcome/_card.scss */
+.cards .btn-modify {
+  cursor: pointer;
+  margin-top: 20px;
+  padding: 10px 50px 10px 50px;
+  font-size: 1rem;
+  border-radius: 20px;
+  border: none;
+  background: #282536;
+  transition: .5s;
+}
+
+/* line 20, ../../../../../laragon/www/hamilton-6-hike-application-groupe-5-jordan-luna/src/ressources/sass/pages/welcome/_card.scss */
+.cards .btn-modify:hover {
+  background: #4e486b;
+}
+
+/* line 23, ../../../../../laragon/www/hamilton-6-hike-application-groupe-5-jordan-luna/src/ressources/sass/pages/welcome/_card.scss */
+.cards .btn-modify a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+}
+
+/* line 30, ../../../../../laragon/www/hamilton-6-hike-application-groupe-5-jordan-luna/src/ressources/sass/pages/welcome/_card.scss */
+.cards img {
+  margin-top: 10px;
+  margin-bottom: 15px;
+  width: 70%;
+  border-radius: 10px;
+  box-shadow: 2px 2px 5px 2px #00000092;
+}
+
+/* line 37, ../../../../../laragon/www/hamilton-6-hike-application-groupe-5-jordan-luna/src/ressources/sass/pages/welcome/_card.scss */
+.cards p {
+  margin-top: 5px;
+}
+
+/* line 43, ../../../../../laragon/www/hamilton-6-hike-application-groupe-5-jordan-luna/src/ressources/sass/pages/welcome/_card.scss */
+.cards .easy #difficulty {
+  background: green;
+  border-radius: 10px;
+  color: white;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+/* line 51, ../../../../../laragon/www/hamilton-6-hike-application-groupe-5-jordan-luna/src/ressources/sass/pages/welcome/_card.scss */
+.cards .normal #difficulty {
+  background: orange;
+  border-radius: 10px;
+  color: white;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+/* line 59, ../../../../../laragon/www/hamilton-6-hike-application-groupe-5-jordan-luna/src/ressources/sass/pages/welcome/_card.scss */
+.cards .normal #difficulty {
+  background: orange;
+  border-radius: 10px;
+  color: white;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+/* line 67, ../../../../../laragon/www/hamilton-6-hike-application-groupe-5-jordan-luna/src/ressources/sass/pages/welcome/_card.scss */
+.cards .hard #difficulty {
+  background: red;
+  border-radius: 10px;
+  color: white;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+/* line 75, ../../../../../laragon/www/hamilton-6-hike-application-groupe-5-jordan-luna/src/ressources/sass/pages/welcome/_card.scss */
+.all-cards {
+  max-width: 80vw;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin: 0 auto;
+}
+
+/* line 3, ../../../../../laragon/www/hamilton-6-hike-application-groupe-5-jordan-luna/src/ressources/sass/pages/create/_section.scss */
+.section__create {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 3px 3px 5px 3px #67676777;
+  border-radius: 20px;
+  margin: 20px 20px 20px 20px;
+  padding: 20px 50px;
+  background-color: #FFFFFF;
+}
+
+/* line 13, ../../../../../laragon/www/hamilton-6-hike-application-groupe-5-jordan-luna/src/ressources/sass/pages/create/_section.scss */
+.section__create h1 {
+  font-size: 2rem;
+}
+
+/* line 16, ../../../../../laragon/www/hamilton-6-hike-application-groupe-5-jordan-luna/src/ressources/sass/pages/create/_section.scss */
+.section__create form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+/* line 20, ../../../../../laragon/www/hamilton-6-hike-application-groupe-5-jordan-luna/src/ressources/sass/pages/create/_section.scss */
+.section__create form * {
+  margin: 1rem 0;
+}
+
+/* line 23, ../../../../../laragon/www/hamilton-6-hike-application-groupe-5-jordan-luna/src/ressources/sass/pages/create/_section.scss */
+.section__create form input {
+  width: 100%;
+  box-shadow: 0px 0px 2px 1px rgba(0, 0, 0, 0.2);
+  border: none;
+  font-size: 1.2rem;
+  border-radius: 0.2rem;
+  padding: 0.5rem;
+  margin-bottom: 1rem;
+  transition: .2s;
+  font-family: 'Quicksand', sans-serif;
+}
+
+/* line 33, ../../../../../laragon/www/hamilton-6-hike-application-groupe-5-jordan-luna/src/ressources/sass/pages/create/_section.scss */
+.section__create form input:focus {
+  outline: none;
+  transform: scale(1.1);
+  border: 1px solid #347452;
+}
+
+/* line 40, ../../../../../laragon/www/hamilton-6-hike-application-groupe-5-jordan-luna/src/ressources/sass/pages/create/_section.scss */
+.section__create form input[type="submit"] {
+  background-color: #347452;
+  color: #ffffff;
+  cursor: pointer;
+}
+
+/* line 44, ../../../../../laragon/www/hamilton-6-hike-application-groupe-5-jordan-luna/src/ressources/sass/pages/create/_section.scss */
+.section__create form input[type="submit"]:hover {
+  background-color: #4e486b;
+}
+
+/* line 48, ../../../../../laragon/www/hamilton-6-hike-application-groupe-5-jordan-luna/src/ressources/sass/pages/create/_section.scss */
+.section__create form div {
+  margin-bottom: 0;
+}
+
+/* line 50, ../../../../../laragon/www/hamilton-6-hike-application-groupe-5-jordan-luna/src/ressources/sass/pages/create/_section.scss */
+.section__create form div select {
+  margin: 0;
+  width: 100%;
+  border: none;
+  border-radius: 0.2rem;
+  padding: 0.2rem;
+  font-size: 1rem;
+  font-family: 'Quicksand', sans-serif;
+}
+
+/* line 58, ../../../../../laragon/www/hamilton-6-hike-application-groupe-5-jordan-luna/src/ressources/sass/pages/create/_section.scss */
+.section__create form div select:focus {
+  outline: none;
+}
+
+/* line 65, ../../../../../laragon/www/hamilton-6-hike-application-groupe-5-jordan-luna/src/ressources/sass/pages/create/_section.scss */
+.section__create label {
+  margin: 40px 0 5px 0px;
+}
+
+/* line 68, ../../../../../laragon/www/hamilton-6-hike-application-groupe-5-jordan-luna/src/ressources/sass/pages/create/_section.scss */
+.section__create input {
+  margin: 0;
+}
+
+/*** DESKTOP ***/
+@media screen and (min-width: 768px) {
+  /* line 79, ../../../../../laragon/www/hamilton-6-hike-application-groupe-5-jordan-luna/src/ressources/sass/pages/create/_section.scss */
+  .section__create {
+    margin: 40px 250px 40px 250px;
+  }
+}
+
+/* line 1, ../../../../../laragon/www/hamilton-6-hike-application-groupe-5-jordan-luna/src/ressources/sass/pages/create/_header.scss */
+.header-create {
+  background-image: url("../medias/hiking.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 200px;
+}
+
+/* line 3, ../../../../../laragon/www/hamilton-6-hike-application-groupe-5-jordan-luna/src/ressources/sass/pages/profil/_section.scss */
+.section__profil {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  text-align: center;
+  width: 80%;
+  box-shadow: 3px 3px 5px 3px #67676777;
+  border-radius: 20px;
+  margin-top: 40px;
+  margin-bottom: 20px;
+  padding: 20px 50px;
+  background-color: #FFFFFF;
+}
+
+/* line 16, ../../../../../laragon/www/hamilton-6-hike-application-groupe-5-jordan-luna/src/ressources/sass/pages/profil/_section.scss */
+.section__profil form {
+  display: flex;
+  flex-direction: column;
+}
+
+/* line 19, ../../../../../laragon/www/hamilton-6-hike-application-groupe-5-jordan-luna/src/ressources/sass/pages/profil/_section.scss */
+.section__profil form input[type="submit"] {
+  background-color: #347452;
+  color: #ffffff;
+  cursor: pointer;
+}
+
+/* line 23, ../../../../../laragon/www/hamilton-6-hike-application-groupe-5-jordan-luna/src/ressources/sass/pages/profil/_section.scss */
+.section__profil form input[type="submit"]:hover {
+  background-color: #4e486b;
+}
+
+/* line 27, ../../../../../laragon/www/hamilton-6-hike-application-groupe-5-jordan-luna/src/ressources/sass/pages/profil/_section.scss */
+.section__profil form input {
+  width: 100%;
+  box-shadow: 0px 0px 2px 1px rgba(0, 0, 0, 0.2);
+  border: none;
+  font-size: 1.2rem;
+  border-radius: 0.2rem;
+  padding: 0.5rem;
+  margin-bottom: 1rem;
+  transition: .2s;
+  font-family: 'Quicksand', sans-serif;
+}
+
+/* line 37, ../../../../../laragon/www/hamilton-6-hike-application-groupe-5-jordan-luna/src/ressources/sass/pages/profil/_section.scss */
+.section__profil form input:focus {
+  outline: none;
+  transform: scale(1.1);
+  border: 1px solid #a856bd;
+}
+
+/* line 45, ../../../../../laragon/www/hamilton-6-hike-application-groupe-5-jordan-luna/src/ressources/sass/pages/profil/_section.scss */
+.section__profil div * {
+  margin: 1rem 0;
+}
+
+/* line 51, ../../../../../laragon/www/hamilton-6-hike-application-groupe-5-jordan-luna/src/ressources/sass/pages/profil/_section.scss */
+.section__profil .personal-informations img {
+  width: 150px;
+  border: solid 2px black;
+  padding: 10px;
+  border-radius: 50%;
+  margin: 0;
+}
+
+/* line 58, ../../../../../laragon/www/hamilton-6-hike-application-groupe-5-jordan-luna/src/ressources/sass/pages/profil/_section.scss */
+.section__profil .personal-informations h2 {
+  margin: 0;
+  font-weight: bolder;
+}
+
+/* line 62, ../../../../../laragon/www/hamilton-6-hike-application-groupe-5-jordan-luna/src/ressources/sass/pages/profil/_section.scss */
+.section__profil .personal-informations p {
+  margin: 0;
+}
+
+/* line 65, ../../../../../laragon/www/hamilton-6-hike-application-groupe-5-jordan-luna/src/ressources/sass/pages/profil/_section.scss */
+.section__profil .personal-informations #quote {
+  font-size: .9rem;
+  font-style: italic;
+}
+
+/* line 1, ../../../../../laragon/www/hamilton-6-hike-application-groupe-5-jordan-luna/src/ressources/sass/pages/profil/_header.scss */
+.header-profil {
+  background-image: url("../medias/hikeprofil.jpg");
+  background-position: 0 40%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 200px;
+}
+
+@keyframes slideInFromUp {
+  0% {
+    transform: translateY(-200%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+/* line 10, ../../../../../laragon/www/hamilton-6-hike-application-groupe-5-jordan-luna/src/ressources/sass/pages/login/_form.scss */
+.container {
+  max-width: 17.5rem;
+  max-height: 100vh;
+  display: block;
+  margin: 10rem auto;
+  box-shadow: 0px 0px 3px 2px rgba(0, 0, 0, 0.2);
+  padding: 2.5rem;
+  border-radius: .5rem;
+  background-color: white;
+  animation: 0.6s ease-out 0s 1 slideInFromUp;
+}
+
+/* line 20, ../../../../../laragon/www/hamilton-6-hike-application-groupe-5-jordan-luna/src/ressources/sass/pages/login/_form.scss */
+.container .arrow {
+  border: solid black;
+  border-width: 0 5px 5px 0;
+  display: inline-block;
+  padding: 5px;
+}
+
+/* line 27, ../../../../../laragon/www/hamilton-6-hike-application-groupe-5-jordan-luna/src/ressources/sass/pages/login/_form.scss */
+.container .left {
+  transform: rotate(135deg);
+  -webkit-transform: rotate(135deg);
+}
+
+/* line 31, ../../../../../laragon/www/hamilton-6-hike-application-groupe-5-jordan-luna/src/ressources/sass/pages/login/_form.scss */
+.container p {
+  font-size: 1rem;
+  font-weight: bold;
+  text-align: center;
+}
+
+/* line 36, ../../../../../laragon/www/hamilton-6-hike-application-groupe-5-jordan-luna/src/ressources/sass/pages/login/_form.scss */
+.container a {
+  text-decoration: none;
+  font-size: .8rem;
+  font-weight: bold;
+  margin-top: 1rem;
+  color: #998f9b;
+}
+
+/* line 43, ../../../../../laragon/www/hamilton-6-hike-application-groupe-5-jordan-luna/src/ressources/sass/pages/login/_form.scss */
+.container hr {
+  width: 50%;
+  margin: 1.2rem auto;
+}
+
+/* line 48, ../../../../../laragon/www/hamilton-6-hike-application-groupe-5-jordan-luna/src/ressources/sass/pages/login/_form.scss */
+.container .form-title {
+  font-size: 1.2rem;
+  margin: 1.5rem 0;
+  text-align: left;
+  font-family: 'Quicksand', sans-serif;
+}
+
+/* line 54, ../../../../../laragon/www/hamilton-6-hike-application-groupe-5-jordan-luna/src/ressources/sass/pages/login/_form.scss */
+.container .form-group {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* line 59, ../../../../../laragon/www/hamilton-6-hike-application-groupe-5-jordan-luna/src/ressources/sass/pages/login/_form.scss */
+.container .form-group button {
+  width: 75%;
+  height: 2rem;
+  border: 1px solid #f397ff;
+  box-shadow: 1px 2px 2px rgba(7, 6, 7, 0.6);
+  border-radius: 0.2rem;
+  background-color: #f397ff;
+  color: white;
+  font-size: 1.2rem;
+  margin: 1rem 0;
+}
+
+/* line 69, ../../../../../laragon/www/hamilton-6-hike-application-groupe-5-jordan-luna/src/ressources/sass/pages/login/_form.scss */
+.container .form-group button:hover {
+  cursor: pointer;
+}
+
+/* line 73, ../../../../../laragon/www/hamilton-6-hike-application-groupe-5-jordan-luna/src/ressources/sass/pages/login/_form.scss */
+.container .form-group input {
+  width: 100%;
+  box-shadow: 0px 0px 2px 1px rgba(0, 0, 0, 0.2);
+  border: none;
+  font-size: 1.2rem;
+  border-radius: 0.2rem;
+  padding: 0.5rem;
+  margin-bottom: 1rem;
+  transition: .2s;
+  font-family: 'Quicksand', sans-serif;
+}
+
+/* line 83, ../../../../../laragon/www/hamilton-6-hike-application-groupe-5-jordan-luna/src/ressources/sass/pages/login/_form.scss */
+.container .form-group input:focus {
+  outline: none;
+  transform: scale(1.1);
+  border: 1px solid #635cb5;
+}
+
+/* line 2, ../../../../../laragon/www/hamilton-6-hike-application-groupe-5-jordan-luna/src/ressources/sass/pages/modify/_section.scss */
+.section__modify {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 3px 3px 5px 3px #67676777;
+  border-radius: 20px;
+  margin: 20px 20px 20px 20px;
+  padding: 20px 50px;
+  background-color: #FFFFFF;
+}
+
+/* line 12, ../../../../../laragon/www/hamilton-6-hike-application-groupe-5-jordan-luna/src/ressources/sass/pages/modify/_section.scss */
+.section__modify h2 {
+  font-size: 2rem;
+}
+
+/* line 16, ../../../../../laragon/www/hamilton-6-hike-application-groupe-5-jordan-luna/src/ressources/sass/pages/modify/_section.scss */
+.section__modify form * {
+  margin: 1rem 0;
+  width: 80%;
+}
+
+/* line 20, ../../../../../laragon/www/hamilton-6-hike-application-groupe-5-jordan-luna/src/ressources/sass/pages/modify/_section.scss */
+.section__modify form input {
+  width: 100%;
+  box-shadow: 0px 0px 2px 1px rgba(0, 0, 0, 0.2);
+  border: none;
+  font-size: 1.2rem;
+  border-radius: 0.2rem;
+  padding: 0.5rem;
+  margin-bottom: 1rem;
+  transition: .2s;
+  font-family: 'Quicksand', sans-serif;
+}
+
+/* line 30, ../../../../../laragon/www/hamilton-6-hike-application-groupe-5-jordan-luna/src/ressources/sass/pages/modify/_section.scss */
+.section__modify form input:focus {
+  outline: none;
+  transform: scale(1.1);
+  border: 1px solid #347452;
+}
+
+/* line 36, ../../../../../laragon/www/hamilton-6-hike-application-groupe-5-jordan-luna/src/ressources/sass/pages/modify/_section.scss */
+.section__modify form input[type="submit"] {
+  background-color: #347452;
+  color: #ffffff;
+  cursor: pointer;
+}
+
+/* line 40, ../../../../../laragon/www/hamilton-6-hike-application-groupe-5-jordan-luna/src/ressources/sass/pages/modify/_section.scss */
+.section__modify form input[type="submit"]:hover {
+  background-color: #4e486b;
+}
+
+/* line 46, ../../../../../laragon/www/hamilton-6-hike-application-groupe-5-jordan-luna/src/ressources/sass/pages/modify/_section.scss */
+.section__modify div select {
+  width: 125%;
+}
+
+/* line 51, ../../../../../laragon/www/hamilton-6-hike-application-groupe-5-jordan-luna/src/ressources/sass/pages/modify/_section.scss */
+.section__modify #delete {
+  background-color: red;
+  cursor: pointer;
+  color: red;
+  width: 100%;
+  padding: 10px;
+  margin-top: 0;
+  font-size: 1.2rem;
+  border-radius: 0.2rem;
+  border: none;
+  padding: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+/* line 63, ../../../../../laragon/www/hamilton-6-hike-application-groupe-5-jordan-luna/src/ressources/sass/pages/modify/_section.scss */
+.section__modify #delete a {
+  text-decoration: none;
+  color: #ffff;
+}
+
+/* line 67, ../../../../../laragon/www/hamilton-6-hike-application-groupe-5-jordan-luna/src/ressources/sass/pages/modify/_section.scss */
+.section__modify #delete:hover {
+  background-color: rgba(255, 0, 0, 0.7);
+}
+
+/*** DESKTOP ***/
+@media screen and (min-width: 768px) {
+  /* line 79, ../../../../../laragon/www/hamilton-6-hike-application-groupe-5-jordan-luna/src/ressources/sass/pages/modify/_section.scss */
+  .section__modify {
+    margin: 40px 250px 40px 250px;
+  }
+}
+
+/* line 1, ../../../../../laragon/www/hamilton-6-hike-application-groupe-5-jordan-luna/src/ressources/sass/pages/modify/_header.scss */
+.header-modify {
+  background-image: url("../medias/hike.webp");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 200px;
+}
+
+/* line 1, ../../../../../laragon/www/hamilton-6-hike-application-groupe-5-jordan-luna/src/ressources/sass/pages/admin/_header.scss */
+.header-admin {
+  background-image: url("../medias/admin.jpg");
+  background-position: 0 65%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 200px;
+}
+
+/***** COLORS *****/
+/***** FONTS *****/
+
+/*# sourceMappingURL=style.css.map */

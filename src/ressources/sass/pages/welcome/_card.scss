@@ -1,0 +1,81 @@
+.cards {
+    text-align: center;
+    background-color: $backgroundCard;
+    width: 100%;
+    padding: 20px 0 20px 0;
+    border-radius: 10px;
+    box-shadow: 3px 3px 5px 3px #67676777;
+    margin: 20px auto;
+    max-width: 25rem;
+    
+    .btn-modify {
+        cursor: pointer;
+        margin-top: 20px;
+        padding: 10px 50px 10px 50px;
+        font-size: 1rem;
+        border-radius: 20px;
+        border: none;
+        background: rgb(40, 37, 54);
+        transition: .5s;
+        &:hover {
+            background: rgb(78, 72, 107);
+        }
+        a {
+            text-decoration: none;
+            color: rgb(255, 255, 255);
+            font-weight: bold;
+        }
+    }
+
+    img {
+        margin-top: 10px; margin-bottom: 15px;
+        width: 70%;
+        border-radius: 10px;
+        box-shadow: 2px 2px 5px 2px #00000092;
+    }
+
+    p {
+        margin-top: 5px;
+    }
+
+//condition de classe easy, normal, hard
+    .easy {
+        #difficulty {
+            background: green;
+            border-radius: 10px;
+            color: white;
+            padding-left: 15px; padding-right: 15px;
+        }
+    }
+    .normal {
+        #difficulty {
+            background: orange;
+            border-radius: 10px;
+            color: white;
+            padding-left: 15px; padding-right: 15px;
+        }
+    }
+    .normal {
+        #difficulty {
+            background: orange;
+            border-radius: 10px;
+            color: white;
+            padding-left: 15px; padding-right: 15px;
+        }
+    }
+    .hard {
+        #difficulty {
+            background: red;
+            border-radius: 10px;
+            color: white;
+            padding-left: 15px; padding-right: 15px;
+        }
+    }
+}
+.all-cards{
+    max-width: 80vw;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin: 0 auto;
+}
